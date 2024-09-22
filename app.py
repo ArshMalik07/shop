@@ -29,8 +29,8 @@ pdfmetrics.registerFont(TTFont('DejaVuSans', font_path))
 
 
 
-application = Flask(__name__)
-application.secret_key = '#1109#'
+app = Flask(__name__)
+app.secret_key = '#1109#'
 
 # Connect to MySQL database
 mydb = mysql.connector.connect(
