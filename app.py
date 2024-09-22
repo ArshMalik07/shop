@@ -34,10 +34,10 @@ application.secret_key = '#1109#'
 
 # Connect to MySQL database
 mydb = mysql.connector.connect(
-    host="localhost",
-    user="root",
-    password="root",
-    database="shop"
+    host="sql5.freesqldatabase.com",
+    user="sql5732641",
+    password="WsLhc6jvCf",
+    database="sql5732641"
 )
 
 # Create users table if not exists
