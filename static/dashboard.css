@@ -1,0 +1,72 @@
+/* static/dashboard.css */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f8f9fa;
+}
+
+header {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #343a40;
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    color: white;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+header .username {
+    font-size: 30px;
+}
+
+.items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 100px;
+    width: 80%;
+    max-width: 600px;
+}
+
+.items form {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    width: 100%;
+    height: 60px;
+    font-size: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+#logout{
+    color: #f8f9fa;
+}
