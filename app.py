@@ -79,7 +79,7 @@ create_sales_table()
 
 
 
-@application.route('/add_item', methods=['GET', 'POST'])
+@app.route('/add_item', methods=['GET', 'POST'])
 def add_item():
     message = ""
     if request.method == 'POST':
@@ -115,7 +115,7 @@ def add_item():
     return render_template('add_item.html', message=message)
 
 
-@application.route('/billing', methods=['GET', 'POST'])
+@app.route('/billing', methods=['GET', 'POST'])
 def billing():
     if 'username' in session:
         username = session['username']
@@ -242,7 +242,7 @@ def generate_pdf(customer_name, item_code, item_name, quantity, amount):
 
     
 
-@application.route('/customers', methods=['GET', 'POST'])
+@app.route('/customers', methods=['GET', 'POST'])
 def customers():
     if 'username' in session:
         username = session['username']
@@ -280,7 +280,7 @@ def customers():
         return redirect('/login')
     
 
-@application.route('/dashboard')
+@app.route('/dashboard')
 def dashboard():
     if 'username' in session:
         username = session['username']
@@ -289,7 +289,7 @@ def dashboard():
         return redirect('/login')
     
 
-@application.route('/delete_item', methods=['POST'])
+@app.route('/delete_item', methods=['POST'])
 def delete_item():
     if 'username' in session:
         username = session['username']
@@ -313,7 +313,7 @@ def delete_zero_quantity_items(user_id):
 
     
 
-@application.route('/reports')
+@app.route('/reports')
 def generate_reports():
     if 'username' in session:
         username = session['username']
@@ -367,12 +367,12 @@ def generate_reports():
         return redirect('/login')
 
     
-@application.route('/')
+@app.route('/')
 def home_page():
     return render_template('login.html')
     
 
-@application.route('/login', methods=['GET', 'POST'])
+@app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
         username = request.form['username']
@@ -387,14 +387,14 @@ def login():
             return redirect('/dashboard')
     return render_template('login.html')
 
-@application.route('/logout')
+@app.route('/logout')
 def logout():
     session.pop('username', None) 
     return redirect('/login')
 
 
 
-@application.route('/register', methods=['GET', 'POST'])
+@app.route('/register', methods=['GET', 'POST'])
 def register():
     if request.method == 'POST':
         username = request.form['username']
@@ -412,7 +412,7 @@ def register():
 
 
 
-@application.route('/records', methods=['GET', 'POST'])
+@app.route('/records', methods=['GET', 'POST'])
 def records():
     if 'username' in session:
         username = session['username']
@@ -445,7 +445,7 @@ def records():
         return redirect('/login')
     
 
-@application.route('/search', methods=['GET'])
+@app.route('/search', methods=['GET'])
 def search():
     if 'username' in session:
         username = session['username']
@@ -481,7 +481,7 @@ def search():
 
 
 
-@application.route('/stock', methods=['GET', 'POST'])
+@app.route('/stock', methods=['GET', 'POST'])
 def stock():
     if 'username' in session:
         username = session['username']
