@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sales Records</title>
+    
+    <link rel="stylesheet" href="\static\records.css">
+    <script src="\static\records.js"></script>
+</head>
+<body>
+    <div class="navbar">
+        <div class="dropdown">
+            <button class="dropbtn">☰</button>
+            <div class="dropdown-content">
+                <a href="/add_item">Add Item</a>
+                <a href="/billing">Bill</a>
+                <a href="/customers">Customers</a>
+                <a href="/dashboard">Dashboard</a>
+                <a href="/reports">Reports</a>
+                <a href="/stock">Stock</a>
+                
+            </div>
+        </div>
+    </div>
+    <h1>Sales Records</h1>
+    <form method="post">
+        <label for="search">Search by Customer Name:</label>
+        <input type="text" name="search" id="search" placeholder="Search by customer name">
+        <button type="submit">Search</button>
+    </form>
+    <br>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Item Code</th>
+                <th>Item Name</th>
+                <th>Customer Name</th>
+                <th>Quantity</th>
+                <th>Amount (per item)</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for record in sales_records %}
+            <tr>
+                <td>{{ record[0] }}</td>
+                <td>{{ record[1] }}</td>
+                <td>{{ record[2] }}</td>
+                <td>{{ record[3] }}</td>
+                <td>{{ record[4] }}</td>
+                <td>{{ record[5] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

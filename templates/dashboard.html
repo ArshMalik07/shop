@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="static/dashboard.css">
+    <script src="\static\dashboard.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Dashboard</h1>
+        <div class="username">user : {{ username }}</div>
+        <a href="/logout" id="logout">Logout</a>
+    </header>
+    <div class="items">
+        <form action="/add_item">
+            <button type="submit">Add Item</button>
+        </form>
+        <form action="/billing">
+            <button type="submit">Billing</button>
+        </form>
+       
+        <form action="/customers">
+            <button type="submit">Customers</button>
+        </form>
+        
+        <form action="/records">
+            <button type="submit">Records</button>
+        </form>
+        <form action="/reports">
+            <button type="submit">Reports</button>
+        </form>
+        <form action="/stock">
+            <button type="submit">Stock</button>
+        </form>
+    </div>
+</body>
+</html>

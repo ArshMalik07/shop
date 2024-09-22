@@ -1,0 +1,104 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing</title>
+    <link rel="stylesheet" href="static/billing.css">
+    <script src="static/billing.js" defer></script>
+</head>
+<body>
+    <div class="navbar">
+        <div class="dropdown">
+            <button class="dropbtn">☰</button>
+            <div class="dropdown-content">
+                <a href="/add_item">Add Item</a>               
+                <a href="/customers">Customers</a>
+                <a href="/dashboard">Dashboard</a>
+                <a href="/records">Records</a>
+                <a href="/stock">Stock</a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h1>Generate Bill</h1>
+        <form method="post" class="billing-form" id="billing-form">
+            <label for="customer_name">Customer Name:</label>
+            <input type="text" name="customer_name" id="customer_name" required>
+            <br>
+
+            <div id="items-container">
+                <div class="item-entry">
+                    <label for="item_code">Item Code:</label>
+                    <input type="text" name="item" required>
+                    <br>
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" name="quantity" required>
+                    <br>
+                    <label for="amount">Amount:</label>
+                    <input type="number" step="0.01" name="amount" required>
+                    <br>
+                </div>
+            </div>
+
+            <button type="button" onclick="addItem()">Add Another Item</button>
+            <br>
+            <button type="submit">Generate Bill</button>
+        </form>
+        <p>{{ message }}</p>
+    </div>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing</title>
+    <link rel="stylesheet" href="static/billing.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="dropdown">
+            <button class="dropbtn">☰</button>
+            <div class="dropdown-content">
+                <a href="/add_item">Add Item</a>
+                <a href="/customers">Customers</a>
+                <a href="/dashboard">Dashboard</a>
+                <a href="/records">Records</a>
+                <a href="/reports">Reports</a>
+                <a href="/stock">Stock</a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h1>Generate Bill</h1>
+        <form method="post" class="billing-form" id="billing-form">
+            <label for="customer_name">Customer Name:</label>
+            <input type="text" name="customer_name" id="customer_name" required>
+            <br>
+            <div id="items-container">
+                <div class="item-entry">
+                    <label for="item_code">Item Code:</label>
+                    <input type="text" name="item" required>
+                    <br>
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" name="quantity" required>
+                    <br>
+                    <label for="amount">Amount(per item):</label>
+                    <input type="number" step="0.01" name="amount" required>
+                    <br>
+                </div>
+            </div>
+            <button type="button" id="add-item-btn">Add Another Item</button>
+            <br>
+            <button type="submit">Generate Bill</button>
+        </form>
+        <p>{{ message }}</p>
+    </div>
+    <script src="static/billing.js" defer></script>
+</body>
+</html>
+
