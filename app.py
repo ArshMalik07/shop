@@ -36,7 +36,7 @@ app.secret_key = '#1109#'
 mydb = mysql.connector.connect(
     host="sql12.freesqldatabase.com",
     user="sql12741524",
-    password=" ieEZMNMzDq",
+    password="ieEZMNMzDq",
     database="sql12741524"
 )
 
