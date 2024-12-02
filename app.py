@@ -37,7 +37,8 @@ mydb = mysql.connector.connect(
     host="myproject-myproject-01.e.aivencloud.com",
     user="avnadmin",
     password="AVNS_fxfwpU3umUALumjhOM3",
-    database="defaultdb"
+    database="defaultdb",
+    ssl_ca="ca.pem"
 )
 
 # Create users table if not exists
