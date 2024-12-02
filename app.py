@@ -34,10 +34,10 @@ app.secret_key = '#1109#'
 
 # Connect to MySQL database
 mydb = mysql.connector.connect(
-    host="sql12.freesqldatabase.com",
-    user="sql12741524",
-    password="ieEZMNMzDq",
-    database="sql12741524"
+    host="myproject-myproject-01.e.aivencloud.com",
+    user="avnadmin",
+    password="AVNS_aa8jYtqeNLv25CSX64U",
+    database="defaultdb"
 )
 
 # Create users table if not exists
