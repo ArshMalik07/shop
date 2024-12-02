@@ -36,7 +36,7 @@ app.secret_key = '#1109#'
 mydb = mysql.connector.connect(
     host="myproject-myproject-01.e.aivencloud.com",
     user="avnadmin",
-    password="AVNS_aa8jYtqeNLv25CSX64U",
+    password="AVNS_fxfwpU3umUALumjhOM3",
     database="defaultdb"
 )
 
