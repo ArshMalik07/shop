@@ -1,4 +1,4 @@
-Electronic Shop Management System
+#Electronic Shop Management System
 
 # Project Overview
 This project is a Flask web application for managing a shop's inventory, sales, and customer records. It connects to a MySQL database and provides functionalities for adding items, processing sales, and generating reports.
